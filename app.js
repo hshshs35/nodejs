@@ -12,6 +12,7 @@ var app = express();
 
 const hbs = require('hbs');
 const fs = require('fs');
+const port = process.env.PORT || 3000;
 
 app.get('/about', (req, res) =>{
   res.render('about.hbs', {
@@ -28,7 +29,7 @@ app.get('/', (req, res) =>{
   });
 });
 
-app.listen(3000);
+app.listen(port);
 
 
 
